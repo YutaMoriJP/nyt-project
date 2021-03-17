@@ -6,9 +6,11 @@ const useFetch = url => {
   const [loading, setLoading] = useState(true);
   useEffect(() => {
     setLoading(true);
+    const controller = new AbortController();
+    const { signal } = controller;
     const asyncReq = async () => {
       try {
-        const res = await fetch(url);
+        const res = await fetch(url, { signal });
         if (res.ok) {
           const resJson = await res.json();
           setData(resJson);
@@ -19,12 +21,16 @@ const useFetch = url => {
           setError(res.status);
         }
       } catch (e) {
-        console.error(e);
+        if(e.name === 'AbortError') {
+          controller.abort()
+        } else {
         setLoading(false);
         setError(e);
+        }
       }
     };
     asyncReq();
+    return () => controller.abort();
   }, [url]);
   return { data, loading, error };
 };

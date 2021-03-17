@@ -4,7 +4,6 @@ import Layout from "./Layout/Layout";
 import Home from "./pages/Home";
 
 const App = () => {
-  console.log(process.env);
   return (
     <Layout>
       <Router>
