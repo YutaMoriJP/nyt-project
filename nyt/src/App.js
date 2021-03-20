@@ -12,7 +12,7 @@ const App = () => {
             <Home />
           </Route>
           <Route>
-            <h1>404 Not found</h1>
+            <h1>404 Page Not found</h1>
             <Link to="/">Go Back to your homepage</Link>
           </Route>
         </Switch>

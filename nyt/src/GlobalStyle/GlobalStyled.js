@@ -10,6 +10,10 @@ body {
     background-color: ${({ theme }) => theme.background};
     color: ${({ theme }) => theme.color}
 }
+a {
+    color: ${props => props.theme.link};
+    font-weight: 900;
+}
 `;
 
 export default GlobalStyled;

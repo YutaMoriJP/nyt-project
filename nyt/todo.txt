@@ -14,3 +14,5 @@ improvements:
 - add a11y - like image alt, <a> alt etc.
 - give custamability options, like changing display, making different searches etc.
 - add theme toggle
+- add error handling if search keyword results in not found repsonse
+- populate 10 results with fixed size for each flex item and user can click on expand that opens up a window on the same page

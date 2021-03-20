@@ -6,6 +6,7 @@ import Typography from "@material-ui/core/Typography";
 
 const Fetch = memo(({ url, renderData }) => {
   const { data, loading, error } = useFetch(url);
+  console.log(`error data looks like`, data);
   if (loading) return <CircularProgress />;
   if (error)
     return (
@@ -22,6 +23,13 @@ const Fetch = memo(({ url, renderData }) => {
         </Alert>
       </>
     );
+  if (!data?.response?.docs.length) {
+    return (
+      <h1>
+        No matching article was found. Please try searching for something else.
+      </h1>
+    );
+  }
   return data.response.docs.map(renderData);
 });
 

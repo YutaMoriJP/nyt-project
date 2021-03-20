@@ -11,6 +11,9 @@ const SearchContainer = styled.article`
     align-self: center;
     padding: 15px;
   }
+  div {
+    flex: 1 1 auto;
+  }
   @media screen and (min-width: 700px) {
     margin: 10px auto;
     width: 80%;
