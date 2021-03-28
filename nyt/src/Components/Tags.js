@@ -1,15 +1,14 @@
 import React from "react";
-import keywords from "../data/keywords/nytkeywords";
 import TagsStyled from "../styled/TagsStyled";
 
-const Tags = ({ onClick }) => {
+const Tags = ({ onClick, keywords }) => {
   const handleClick = e => onClick(e.target.outerText);
   return (
     <TagsStyled>
       <h1>Suggested Tags</h1>
       <ul>
-        {keywords.map((keyword, index) => (
-          <li onClick={handleClick} key={index}>
+        {keywords.map(({ keyword, id }) => (
+          <li onClick={handleClick} key={id}>
             {keyword}
           </li>
         ))}

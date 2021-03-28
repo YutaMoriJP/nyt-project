@@ -1,3 +1,5 @@
+import { v4 as uuidv4 } from "uuid";
+
 const keywords = [
   "sport",
   "art",
@@ -12,4 +14,6 @@ const keywords = [
   "science",
 ];
 
-export default keywords;
+const keywordCollection = keywords.map(keyword => ({ keyword, id: uuidv4() }));
+
+export default keywordCollection;

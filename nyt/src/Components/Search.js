@@ -3,7 +3,7 @@ import TextField from "@material-ui/core/TextField";
 //styled component
 import SearchContainer from "../styled/SearchContainer";
 
-const Search = ({ children, value }) => {
+const Search = ({ children, value, handleKeyPress }) => {
   const inputEl = useRef();
   useEffect(() => {
     inputEl.current.focus();
@@ -11,7 +11,7 @@ const Search = ({ children, value }) => {
 
   return (
     <>
-      <SearchContainer>
+      <SearchContainer onKeyPress={handleKeyPress}>
         <TextField
           label="search for keywords like sport, art etc."
           type="text"

@@ -10,6 +10,10 @@ body {
     background-color: ${({ theme }) => theme.background};
     color: ${({ theme }) => theme.color}
 }
+p{
+    font-size:15px;
+    text-align:left;
+}
 a {
     color: ${props => props.theme.link};
     font-weight: 900;

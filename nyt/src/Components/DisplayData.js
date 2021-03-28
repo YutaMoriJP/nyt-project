@@ -13,7 +13,7 @@ const DisplayData = ({ title, abstract, credit, modal }) => {
     <>
       <h1>{title}</h1>
       <p>{abstract}</p>
-      <Grid container space={1} justify="space-between">
+      <Grid container justify="space-between">
         <Grid item>
           <Button>
             <a target="_blank" rel="noreferrer" href={credit}>
