@@ -33,7 +33,6 @@ const Home = () => {
     reset();
   };
   const handleKeyPress = e => {
-    console.log(e.key);
     if (/enter/i.test(e.key)) {
       handleClick();
     }

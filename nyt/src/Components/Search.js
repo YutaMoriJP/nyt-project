@@ -7,8 +7,7 @@ const Search = ({ children, value, handleKeyPress }) => {
   const inputEl = useRef();
   useEffect(() => {
     inputEl.current.focus();
-  });
-
+  }, []);
   return (
     <>
       <SearchContainer onKeyPress={handleKeyPress}>
