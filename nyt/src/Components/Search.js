@@ -16,6 +16,7 @@ const Search = ({ children, value, handleKeyPress }) => {
           type="text"
           {...value}
           inputRef={inputEl}
+          id="search input field"
         />
         {children}
       </SearchContainer>
